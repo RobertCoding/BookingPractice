@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .bannerimage {
+            width: 100%;
+            height: 660px;
+            overflow: hidden;
+            background-color: white;
+            background-position: center;
+        }
+        
+        /* upper */
+        .imglayer1 {
+            position: absolute;
+            left:0px;
+            top:0px;
+            z-index: 2;
+        }
+
+        .w3-animate-fading{
+            animation-delay: 2s;
+            animation:fading 8s infinite
+        }
+        
+        @keyframes fading{
+            0%{opacity:0}
+            50%{opacity:1}
+            100%{opacity:0}
+        }
+
+        /* bottom */
+        .imglayer2 {
+            position: absolute;
+            left:0px;
+            top:0px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- w3-content -->
+    <div>
+        <!-- Header -->
+        <header class="headerContainer">
+            <!-- upper -->
+            <div class="bannerimage imglayer1 w3-animate-fading">Upper</div>
+            <!-- bottom -->
+            <div class="bannerimage imglayer2">Bottom</div>
+
+        </header>
+    <!-- END w3-content -->
+    </div>
+
+    <script>
+
+        const imgList = {
+            // "img0" : "imgHB/room_1-3.jpeg",
+            "img1" : "imgHB/room_2-3.jpeg",
+            "img2" : "imgHB/room_3-2.jpeg",
+            "img3" : "imgHB/room_4-2.jpeg",
+            "img4" : "imgHB/room_5-1.jpeg",
+            "img5" : "imgHB/room_5-3.jpeg",
+            "img6" : "imgHB/room_6-2.jpeg"
+        };
+
+        // slideshow (refer to W3)
+        let myIndex = 1;
+        let imageCounter = Object.keys(imgList).length;
+        
+        carousel();
+
+        function carousel() {
+            // let i;
+            let upperImg = document.querySelector(".imglayer1");
+            let bottomImg = document.querySelector(".imglayer2");
+
+
+            if (myIndex > imageCounter) {myIndex = 1};
+            // even, upper
+            if (Math.abs(myIndex % 2) == 1) {
+                console.log("upper");
+                console.log(myIndex);
+                myIndex1 = myIndex;
+                newUpperImgSite = imgList['img' + myIndex1];
+                upperImg.style.backgroundImage = "url(" + newUpperImgSite + ")";
+                myIndex++;
+                setTimeout(carousel, 4000);
+            }
+            // odd, bottom
+            else if (myIndex % 2 == 0) {
+                console.log('bottom');
+                console.log(myIndex);
+                myIndex2 = myIndex;
+                newBottomImgSite = imgList['img' + myIndex2];
+                bottomImg.style.backgroundImage = "url(" + newBottomImgSite + ")";
+                myIndex++;
+                setTimeout(carousel, 4000);
+            }
+
+            
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
