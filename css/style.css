@@ -31,18 +31,21 @@ h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 
-.headerContainer {
+.slideshow-container {
   width: 100%;
   height: 660px;
   margin: 0, auto;
-  position: relative;
+  position: absolute;
   /* background-color: lightseagreen; */
 }
 
+
+
 .head-title-container{
-  position: relative;
-  top: 25%;
-  /* left: 40%; */
+  /* position: relative; */
+  position: absolute;
+  top: 18%;
+  left: 45%;
   width: 146px;
   height: 146px;
   border: 3px solid white;
@@ -57,7 +60,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   /* box-shadow: -7px -4px 4px green; */
   /* x-axi, y-axi, color */
   box-shadow: -1rem -16px rgba(255, 255, 255, 0.4);
-  margin: auto;
+  /* margin: auto; */
+  /* margin: 155px auto 47px; */
+  /* margin-top: 155px; */
+
 }
 
 .head-title-style {
@@ -69,7 +75,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
   color: white;
   display: flex;
   /* padding: auto; */
-  margin: auto;
+  /* margin: auto; */
 }
 
 .head-title-location {
@@ -87,13 +93,58 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 .contact-container{
-  position: relative;
-  top: 30%;
+  display: flex;
+  /* display:inline-block; */
+  /* flex-direction: column; */
+  /* position: relative;
+  top: 50%; */
+  width: 500px;
+  /* height: 91px; */
+  align-items: center;
+  justify-content: center;
+
+}
+
+.icon-size {font-size: 48px;}
+
+.icon-reverse {
+  color:white;
+}
+
+.igfb-box {
+  /* padding: 0 35px 0 20px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  padding-left: 20px;
+  /* margin:auto; */
+}
+
+.PhoneMailHome-box {
+  padding-left: 27px;
+  border-left: 1px solid #fff;
+  height: 91px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color:white;
+  letter-spacing: 1.25px;
+}
+
+.icon-margin-right {
+  font-family: "Noto Sans TC",sans-serif;
+  margin-right: 21px;
 }
 
 
+.icon-center {
+  align-items: center;
+  display: flex;
+}
 
+.icon-font {
+  font-size: 14px;
 
+}
 
 
 
@@ -109,7 +160,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 /* .w3-padding-64{padding-top:64px!important;padding-bottom:64px!important} */
 
+/* w3-center */
 .w3-center{text-align:center}
+
 .w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
 
 .w3-wide{letter-spacing:4px}
@@ -143,11 +196,16 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 /* @media (max-width:1205px){.w3-auto{max-width:95%}} */
 
 
+/* w3-hover-opacity */
+.w3-opacity,.w3-hover-opacity:hover{opacity:0.60}
 
 
+/* w3-xlarge */
+.w3-xlarge{font-size:24px}
 
 
+/* w3-margin-right */
+.w3-margin-right{margin-right:16px!important}
 
-
-
-
+/* w3-margin-left */
+.w3-margin-left{margin-left:16px!important}
