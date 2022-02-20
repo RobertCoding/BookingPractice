@@ -33,11 +33,68 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .headerContainer {
   width: 100%;
-  height: 330px;
+  height: 660px;
   margin: 0, auto;
   position: relative;
-  background-color: lightseagreen;
+  /* background-color: lightseagreen; */
 }
+
+.head-title-container{
+  position: relative;
+  top: 25%;
+  left: 45%;
+  width: 146px;
+  height: 146px;
+  border:3px solid white;
+  fill: #fff;
+  fill-opacity: 0.300153;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+  /* opacity: 0.4; */
+  /* https://stackoverflow.com/questions/5135019/css-opacity-only-to-background-color-not-the-text-on-it */
+  background:rgba(185, 185, 185, 0.2);
+  /* box-shadow: 10px 10px white inset; */
+  /* box-shadow: -7px -4px 4px green; */
+  /* x-axi, y-axi, color */
+  box-shadow: -1rem -16px rgba(255, 255, 255, 0.4);
+}
+
+.head-title-style {
+  position: relative;
+  /* font-family: "Noto Sans TC",sans-serif; */
+  font-family: NotoSansCJKtc-Medium, "Noto Sans CJK TC";
+  /* font-size: 16; */
+  font-weight: 400;
+  color: white;
+  display: flex;
+  /* padding: auto; */
+  margin: auto;
+}
+
+.head-title-location {
+  position:absolute;
+  top:40%;
+  left:50%;
+  /* transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%) */
+}
+
+.head-title-middle{
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+
+
+.w3-center{text-align:center}
+.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+
+.w3-wide{letter-spacing:4px}
+
+
+
+
+
 
 
 

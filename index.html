@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
         .bannerimage {
             width: 100%;
@@ -20,7 +21,7 @@
             position: absolute;
             left:0px;
             top:0px;
-            z-index: 2;
+            z-index: -1;
         }
 
         .w3-animate-fading{
@@ -31,6 +32,27 @@
         @keyframes fading{
             0%{opacity:0}
             50%{opacity:1}
+            /* 100%{opacity:0} */
+        }
+
+
+        .w3-animate-fadingOut{
+            /* animation-delay: 2s; */
+            animation:fadingOut 4s infinite
+        }
+        @keyframes fadingOut{
+            0%{opacity:0}
+            50%{opacity:1}
+            100%{opacity:1}
+        }
+
+        .w3-animate-fadingIn{
+            /* animation-delay: 2s; */
+            animation:fadingIn 4s infinite
+        }
+        @keyframes fadingIn{
+            0%{opacity:1}
+            50%{opacity:0}
             100%{opacity:0}
         }
 
@@ -39,8 +61,9 @@
             position: absolute;
             left:0px;
             top:0px;
-            z-index: 1;
+            z-index: -2;
         }
+
     </style>
 </head>
 <body>
@@ -49,11 +72,23 @@
         <!-- Header -->
         <header class="headerContainer">
             <!-- upper -->
-            <div class="bannerimage imglayer1 w3-animate-fading">Upper</div>
+            <div class="bannerimage imglayer1 "></div>
             <!-- bottom -->
-            <div class="bannerimage imglayer2">Bottom</div>
+            <div class="bannerimage imglayer2"></div>
+
+            <div class="head-title-container " style="z-index: 0;">
+                <h2 class="head-title-style w3-display-middle w3-center w3-wide" style="z-index: 1;">
+                    White <br> Space
+                </h2>
+            </div>
+
+            <div class="contact-container">
+                
+            </div>
 
         </header>
+
+
     <!-- END w3-content -->
     </div>
 
@@ -89,6 +124,8 @@
                 myIndex1 = myIndex;
                 newUpperImgSite = imgList['img' + myIndex1];
                 upperImg.style.backgroundImage = "url(" + newUpperImgSite + ")";
+                upperImg.classList.remove("w3-animate-fadingIn");
+                upperImg.classList.add("w3-animate-fadingOut");
                 myIndex++;
                 setTimeout(carousel, 4000);
             }
@@ -99,6 +136,8 @@
                 myIndex2 = myIndex;
                 newBottomImgSite = imgList['img' + myIndex2];
                 bottomImg.style.backgroundImage = "url(" + newBottomImgSite + ")";
+                upperImg.classList.remove("w3-animate-fadingOut");
+                upperImg.classList.add("w3-animate-fadingIn");
                 myIndex++;
                 setTimeout(carousel, 4000);
             }
