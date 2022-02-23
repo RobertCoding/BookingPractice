@@ -191,19 +191,20 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
 
 
+/* w3-hover-opacity */
+.w3-opacity,.w3-hover-opacity:hover{opacity:0.60}
 
 
+/* w3-light-grey */
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
 
 
+/* w3-padding-32 */
+.w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
 
 
-
-
-
-
-
-
-
+/* w3-hover-text-green */
+.w3-text-green,.w3-hover-text-green:hover{color:#4CAF50!important}
 
 
 
@@ -325,6 +326,134 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     align-items: center;
     /* display: flex; */
 }
+
+
+/* room container */
+.post-container {
+    /* background-color:yellowgreen; */
+    max-width: 944px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 多行 */
+    /* https://w3c.hexschool.com/flexbox/4ed6ec22 */
+    flex-wrap: wrap;
+    /* padding: 0 20px; */
+    position: absolute;
+    top: 553px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.room-cards {
+    height: 350px;
+    width: 300px;
+    background-color: #f7f7f7;
+    /* background-color:goldenrod; */
+    margin-bottom: 58px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 2px 2px 9px 0 rgb(0 0 0 / 18%);
+}
+
+
+.room-photo {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.room-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.room-img-hover-opacity:hover{opacity:0.80}
+
+
+.room-info {
+    background-color: #F7F7F7;
+    color:#000;
+    box-sizing: border-box;
+    padding: 23px 24px 17px 30px;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    transition: height .3s;
+}
+
+.room-name {
+    font-size: 14px;
+}
+
+.price-info {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1 1;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+/* price info */
+.price-info span:first-child{
+    font-size: 21px;
+}
+
+.price-info span:first-child span{
+    font-size: 12px;
+    color: inherit;
+}
+
+.price-info span:last-child{
+    font-size: 12px;
+    color: #6D7278 ;
+}
+
+/* price info box shift effect */
+.room-cards:hover .room-info{
+    height: 110px;
+}
+
+.room-cards:hover .price-info{
+    opacity: 1;  
+}  
+.room-cards:hover .room-photo{
+    opacity: .8;
+
+}
+
+
+@media screen and (max-width: 1023px){
+    .post-container{
+        width: 622px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .post-container{
+        width: 300px;
+        padding: 0;
+    }
+}
+
+
+/* footer */
+.footer-style {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
 
 
 
